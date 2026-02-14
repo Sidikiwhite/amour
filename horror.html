@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es-tu prête ?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/horror.css">
+</head>
+<body>
+    <div id="page1">
+        <div class="content">
+            <h1 class="glitch">Es-tu prête ?</h1>
+            <p class="horror-text">Es-tu prête pour la suite ??</p>
+            <div class="horror-buttons">
+                <button class="horror-btn horror-btn-yes" onclick="acceptHorror()">OUI</button>
+                <button class="horror-btn horror-btn-no" onclick="dodgeNo(event, 'horror')">
+                    NON
+                    <span class="click-again" id="horrorClickAgain">Clique encore pour sortir</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

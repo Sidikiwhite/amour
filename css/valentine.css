@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+
+/* =============== PAGE 2: VALENTINE QUESTION =============== */
+#page2 {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 50%, #ffd6eb 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#page2::before {
+    content: '💕';
+    position: absolute;
+    font-size: 15rem;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(10deg); }
+}
+
+.valentine-container {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.valentine-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    color: #ff1493;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(255, 20, 147, 0.2);
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.05); }
+    50% { transform: scale(1); }
+}
+
+.valentine-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.valentine-btn {
+    padding: 20px 60px;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Quicksand', sans-serif;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.valentine-btn-yes {
+    background: linear-gradient(135deg, #ff1493, #ff69b4);
+    color: #fff;
+}
+
+.valentine-btn-yes:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(255, 20, 147, 0.4);
+}
+
+.valentine-btn-no {
+    background: #e0e0e0;
+    color: #666;
+    transition: all 0.2s;
+}
+
+.yay-message {
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 700;
+    color: #ff1493;
+    opacity: 0;
+    transform: scale(0);
+    margin-top: 30px;
+}
+
+.yay-message.show {
+    animation: yayAppear 1s forwards;
+}
+
+@keyframes yayAppear {
+    0% { opacity: 0; transform: scale(0) rotate(-10deg); }
+    50% { transform: scale(1.2) rotate(5deg); }
+    100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .valentine-btn {
+        padding: 15px 30px;
+    }
+}

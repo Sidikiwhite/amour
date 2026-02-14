@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message d'Amour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/endmessage.css">
+</head>
+<body>
+    <div id="page4">
+        <div class="message-container">
+            <h2 class="message-question">Lire le message d'amour ? 💌</h2>
+            <div class="message-btn-group">
+                <button class="message-btn message-btn-yes" onclick="showPoem()">OUI</button>
+                <button class="message-btn message-btn-no" onclick="dodgeNo(event, 'message')">Non</button>
+            </div>
+
+            <div class="poem-container" id="poemContainer">
+                <h2>Pour Toi, Mon Amour 💕</h2>
+                <div class="poem-text">
+                    <p>Dans le jardin secret de mon cœur épanoui,<br>
+                    Tu es la rose la plus belle, mon doux paradis.<br>
+                    Chaque battement résonne ton prénom adoré,<br>
+                    Car tu es mon étoile, ma raison de respirer.</p>
+
+                    <p>Tes yeux sont des océans où je me perds volontiers,<br>
+                    Ton sourire illumine mes jours les plus sombres, entiers.<br>
+                    Dans tes bras, j'ai trouvé ma place, mon refuge éternel,<br>
+                    Tu es mon rêve devenu réel, mon amour si réel.</p>
+
+                    <p>Chaque instant à tes côtés est un cadeau précieux,<br>
+                    Un trésor que je chéris sous les regards des cieux.<br>
+                    Je promets de t'aimer jusqu'à la fin de mes jours,<br>
+                    De te montrer chaque seconde la force de mon amour.</p>
+
+                    <p>Tu es mon aujourd'hui, mon demain, mon toujours,<br>
+                    La mélodie de ma vie, ma plus belle histoire d'amour.<br>
+                    Joyeuse Saint-Valentin, mon cœur, mon tout,<br>
+                    Je t'aime infiniment, plus que tout. 💖</p>
+                </div>
+            </div>
+
+            <div id="finalQuestionContainer" class="hidden">
+                <h2 class="final-question">Est-ce que ce premier cadeau de Saint-Valentin t'a plu ? 🎁</h2>
+                <div class="final-btn-group">
+                    <button class="message-btn message-btn-yes" onclick="celebrate()">OUI !</button>
+                    <button class="message-btn message-btn-no" onclick="dodgeNo(event, 'final')">Non</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hearts animation container -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

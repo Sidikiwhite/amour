@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+
+/* =============== PAGE 4: LOVE MESSAGE =============== */
+#page4 {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.message-container {
+    max-width: 800px;
+    text-align: center;
+}
+
+.message-question {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #ff1493;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.message-btn-group {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.message-btn {
+    padding: 18px 50px;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Quicksand', sans-serif;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.message-btn-yes {
+    background: linear-gradient(135deg, #ff1493, #ff69b4);
+    color: white;
+}
+
+.message-btn-yes:hover {
+    transform: scale(1.1);
+}
+
+.message-btn-no {
+    background: #e0e0e0;
+    color: #666;
+}
+
+.poem-container {
+    opacity: 0;
+    transform: translateY(30px);
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+}
+
+.poem-container.show {
+    animation: fadeInUp 1.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.poem-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #ff1493;
+    margin-bottom: 30px;
+}
+
+.poem-text {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    line-height: 2;
+    color: #333;
+    font-style: italic;
+    text-align: left;
+}
+
+.poem-text p {
+    margin-bottom: 20px;
+}
+
+.final-question {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #ff1493;
+    margin-bottom: 30px;
+}
+
+.final-btn-group {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Animation coeurs */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    font-size: 3rem;
+    animation: riseUp 4s linear forwards;
+    opacity: 0;
+}
+
+@keyframes riseUp {
+    0% {
+        bottom: -50px;
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 120%;
+        opacity: 0;
+        transform: translateX(var(--x-offset)) rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .message-btn {
+        padding: 15px 30px;
+    }
+
+    .poem-container {
+        padding: 30px 20px;
+    }
+}
